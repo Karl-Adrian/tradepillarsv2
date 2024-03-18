@@ -21,14 +21,6 @@ body {
     background-size: cover;
 }
 
-/* header,
-footer {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.788);
-    gap: 12px;
-} */
 
 header {
     background: #000;
@@ -72,10 +64,21 @@ header #site-logo {
     }
   
 }
-/* icons brk */
+/* icons and forex and binary cards brk */
 @media (max-width: 768px) {
+    .gallery-cards .cards {
+      flex-basis: 45%;
+      max-width: none;
+    }
     .icons {
       display:inline-flex;
+}
+
+@media (max-width: 576px) {
+  .gallery-cards .cards {
+    flex-basis:90%;
+  }
+
 }
 #check:checked~.icons #menu-icon {
   display:none
@@ -90,31 +93,20 @@ header #site-logo {
 }
 }
 
-
-  
-
-/* header input[type='search'] {
-    padding: 10px;
-    width: 100%;
-    height: 32px;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-} */
-
 /* COIN ANIMATION */
 .coin {
   font-size: 200px;
   width: 0.1em;
   height: 0.7em;
   background: linear-gradient(transparent, transparent);
-  margin: auto;
+  margin-left: 50%;
+  margin-bottom:13% ;
   border-radius: 30px;
   top: 0%;
   padding: 10px;
   left: 0;
   right: 0;
-  bottom: 10;
+  bottom: 1;
   animation: rotate_4001510 5s infinite linear;
   transform-style: preserve-3d;
 }
@@ -130,6 +122,7 @@ header #site-logo {
   overflow: hidden;
   border-radius: 50%;
   right: -0.4em;
+  margin-bottom: 10px;
   text-align: center;
   line-height: 1;
   transform: rotateY(-90deg);
@@ -176,6 +169,7 @@ header #site-logo {
   width:100%;
   height: 100vh;
   background: rgba(0,0,0,0.5);
+  z-index: 1;
 }
 
 .details {
@@ -209,32 +203,33 @@ header #site-logo {
     align-items: center;
     flex-wrap: wrap;
     max-width: 100%;
-    margin: 10%;
+    margin: 5%;
 }
-
-body .gallery-cards .cards {
+.gallery-cards .cards {
   position: relative;
-  min-width: 450px;
+  flex: 1 1 30%;
+  min-width: 400px;
+  max-width: 400px;
   background-color: #ebebeb00;
   height: 350px;
   border-radius: 15px;
-  margin: 30px;
+  margin: 2%;
   transition: 0.5s;
 }
 
-body .gallery-cards .cards:nth-child(1) .cards-box .cards-content a {
+.gallery-cards .cards:nth-child(1) .cards-box .cards-content a {
   background: gold;
 }
 
-body .gallery-cards  .cards:nth-child(2) .box .content a {
+.gallery-cards  .cards:nth-child(2) .box .content a {
   background: gold;
 }
 
-body .gallery-cards .cards:nth-child(3) .cards-box .cards-content a {
+.gallery-cards .cards:nth-child(3) .cards-box .cards-content a {
   background: gold;
 }
 
-body .gallery-cards .cards .cards-box {
+.gallery-cards .cards .cards-box {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -249,11 +244,11 @@ body .gallery-cards .cards .cards-box {
   transition: 0.5s;
 }
 
-body .gallery-cards .cards .cards-box:hover {
+.gallery-cards .cards .cards-box:hover {
   transform: translateY(-50px);
 }
 
-body .gallery-cards .cards .cards-box:before {
+.gallery-cards .cards .cards-box:before {
   content: "";
   position: absolute;
   top: 0;
@@ -263,12 +258,12 @@ body .gallery-cards .cards .cards-box:before {
   background: rgba(255, 255, 255, 0.03);
 }
 
-body .gallery-cards .cards .cards-box .cards-content {
+.gallery-cards .cards .cards-box .cards-content {
   padding: 20px;
   text-align: center;
 }
 
-body .gallery-cards .cards .cards-box .cards-content h2 {
+.gallery-cards .cards .cards-box .cards-content h2 {
   position: absolute;
   top: -10px;
   right: 30px;
@@ -276,7 +271,7 @@ body .gallery-cards .cards .cards-box .cards-content h2 {
   color: rgba(255, 255, 255, 0.1);
 }
 
-body .gallery-cards .cards .cards-box .cards-content h3 {
+.gallery-cards .cards .cards-box .cards-content h3 {
   font-size: 1.8rem;
   color: #ffffff;
   z-index: 1;
@@ -284,7 +279,7 @@ body .gallery-cards .cards .cards-box .cards-content h3 {
   margin-bottom: 15px;
 }
 
-body .gallery-cards .cards .cards-box .cards-content p {
+.gallery-cards .cards .cards-box .cards-content p {
   font-size: 1rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.9);
@@ -292,7 +287,7 @@ body .gallery-cards .cards .cards-box .cards-content p {
   transition: 0.5s;
 }
 
-body .gallery-cards .cards .cards-box .cards-content a {
+.gallery-cards .cards .cards-box .cards-content a {
   position: relative;
   display: inline-block;
   padding: 8px 20px;
@@ -304,17 +299,17 @@ body .gallery-cards .cards .cards-box .cards-content a {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
 }
-body .gallery-cards .cards .cards-box .cards-content a:hover {
+.gallery-cards .cards .cards-box .cards-content a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
   background: black;
   color: gold;
 }
 
-body .gallery-cards .cards .card1 {
+.gallery-cards .cards .card1 {
   background-image:url(./images/binary\ homepage\ 2.JPG);
   background-size: cover;
 }
-body .gallery-cards .cards .card2 {
+.gallery-cards .cards .card2 {
   background-image:url(./images/Forex\ homepage.JPG);
   background-size: cover;
 }
@@ -324,7 +319,7 @@ body .gallery-cards .cards .card2 {
     max-width: 100%; /* Adjust the width of the card sections */
     box-sizing: border-box;
     padding: 50px;
-    /* margin: 10%; */
+    margin-left: 5%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -402,6 +397,7 @@ footer {
 .logo {
   width: 80px;
   margin-bottom: 30px;
+  border-radius: 27%;
 } 
 
 .col h3{
@@ -671,7 +667,6 @@ main {
 }
 
 
-/* LOG-IN PAGE */
 .card-behind {
   background-color: whitesmoke;
   border-radius: 20px;
@@ -752,12 +747,12 @@ textarea:focus~ .label{
   transition: all 0.3s ease;
 }
 
-.input-container input[type="text"]:focus ~ .underline,
-.input-container input[type="text"]:valid ~ .underline,
-.input-container input[type="email"]:focus ~ .underline,
-.input-container input[type="email"]:valid ~ .underline,
-.input-container input[type="password"]:focus ~ .underline,
-.input-container input[type="password"]:valid ~ .underline ,
+.input-container input[type="text"]:focus ~ .underline1,
+.input-container input[type="text"]:valid ~ .underline1,
+.input-container input[type="email"]:focus ~ .underline1,
+.input-container input[type="email"]:valid ~ .underline1,
+.input-container input[type="password"]:focus ~ .underline1,
+.input-container input[type="password"]:valid ~ .underline1,
 textarea:focus ~ .underline,
 textarea:valid ~ .underline {
   transform: scaleX(1);
@@ -784,4 +779,5 @@ textarea:valid ~ .underline {
   text-align: center;
   margin-top: 20px;
 }
+
 
